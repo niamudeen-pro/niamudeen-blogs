@@ -12,9 +12,11 @@ import rehypePrettyCode from "rehype-pretty-code";
 import { transformerCopyButton } from '@rehype-pretty/transformers'
 import rehypeAutolinkHeadings from 'rehype-autolink-headings'
 import rehypeSlug from 'rehype-slug'
+import { notFound } from 'next/navigation';
 
 
-function getBlog(id: { id: string }) {
+function getBlog(id: string | null) {
+    if (!id) return null
     // Get the directory path
     const blogsDir = path.join(process.cwd(), "src/content");
 
@@ -40,9 +42,14 @@ function getBlog(id: { id: string }) {
 
 
 export default async function Page({ params }: {
-    params: { id: string }
+    params: { id: string | null }
 }) {
-    const { data, content } = matter(getBlog(params?.id))
+    const blogContent = getBlog(params?.id);
+    if (!blogContent) {
+        notFound()
+        return
+    }
+    const { data, content } = matter(blogContent)
     const processor = unified()
         .use(remarkParse)
         .use(remarkRehype)

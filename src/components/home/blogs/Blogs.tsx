@@ -28,7 +28,14 @@ export default function Blogs() {
                 <h2 className="text-3xl font-bold text-center mb-8">Latest Blog Posts</h2>
                 <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
                     {blogs.map((post) => (
-                        <BlogCard key={post.slug} {...post} />
+                        <BlogCard
+                            key={post.slug}
+                            title={post.title}
+                            description={post.description}
+                            author={post.author}
+                            imageUrl={post.imageUrl}
+                            slug={post.slug}
+                        />
                     ))}
                 </div>
             </div>
