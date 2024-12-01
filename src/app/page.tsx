@@ -1,5 +1,5 @@
-import Blogs from '@/components/home/blogs/Blogs'
-import HeroSection from '@/components/home/HeroSection'
+import Blogs from '@/components/home/blogs/blogs'
+import HeroSection from '@/components/home/hero-section'
 
 export default function Page() {
   return (

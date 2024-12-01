@@ -1,5 +1,5 @@
 "use client";
-import { ModeToggle } from "@/components/ModeToggle";
+import { ModeToggle } from "@/components/mode-toggle";
 import {
   Sheet,
   SheetContent,

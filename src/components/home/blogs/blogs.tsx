@@ -1,15 +1,13 @@
-import { BlogCard } from "./BlogCard"
+import { BlogCard } from "./blog-card"
 import fs from 'fs';
 import path from 'path';
 import matter from "gray-matter";
 
+
+
 function getBlogs() {
-    // Get the directory path
     const blogsDir = path.join(process.cwd(), "src/content");
-
-    // Read all the files in the directory
     const files = fs.readdirSync(blogsDir);
-
     if (files?.length === 0) return [];
     const blogs = files.map((file) => {
         const filePath = path.join(blogsDir, file);

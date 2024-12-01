@@ -83,3 +83,13 @@ body {
     @apply flex items-center justify-center;
   }
 }
+
+::selection {
+  background-color: rgba(
+    207,
+    210,
+    209,
+    0.2
+  ); /* Light background with 20% opacity */
+  color: inherit; /* Keep text color unchanged */
+}
