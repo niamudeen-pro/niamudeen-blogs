@@ -23,7 +23,7 @@ export function BlogCard({
 }: BlogCardProps) {
     return (
         <Card className="overflow-hidden">
-            <AspectRatio ratio={16 / 9}>
+            <AspectRatio ratio={16 / 9} className='z-10'>
                 <Image
                     src={imageUrl}
                     alt={title}

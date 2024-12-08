@@ -14,15 +14,15 @@ import BrandLogo from "../shared/BrandLogo";
 
 export default function Navbar() {
   return (
-    <header className="h-14 border-b bg-background/50 sticky top-0 backdrop-blur flex items-center px-4">
+    <header className="h-14 border-b bg-background/50 sticky top-0 backdrop-blur flex items-center px-4 z-50">
       <div className="flex_between container mx-auto">
         <BrandLogo />
-        <nav className="hidden sm:flex">
+        <nav>
           <ul className="flex items-center gap-4">
             <ModeToggle />
           </ul>
         </nav>
-        <div className="block sm:hidden">
+        <div className="hidden">
           <Sheet>
             <SheetTrigger>
               <Menu />
