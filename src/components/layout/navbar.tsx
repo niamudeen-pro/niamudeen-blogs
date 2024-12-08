@@ -19,9 +19,6 @@ export default function Navbar() {
         <BrandLogo />
         <nav className="hidden sm:flex">
           <ul className="flex items-center gap-4">
-            <Link href="/">
-              <li>Home</li>
-            </Link>
             <ModeToggle />
           </ul>
         </nav>
