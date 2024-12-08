@@ -10,15 +10,13 @@ import {
 } from "@/components/ui/sheet"
 import { Menu } from "lucide-react";
 import Link from "next/link";
+import BrandLogo from "../shared/BrandLogo";
 
 export default function Navbar() {
   return (
     <header className="h-14 border-b bg-background/50 sticky top-0 backdrop-blur flex items-center px-4">
       <div className="flex_between container mx-auto">
-        <Link href="/" className="text-xl">
-          Niamudeen <span className="font-semibold">Blogs
-          </span>
-        </Link>
+        <BrandLogo />
         <nav className="hidden sm:flex">
           <ul className="flex items-center gap-4">
             <Link href="/">
